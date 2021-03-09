@@ -5,7 +5,7 @@ Summary:	Defer Python module import
 Summary(pl.UTF-8):	Opóźnianie importu modułów Pythona
 Name:		python-%{module}
 Version:	3.5.3
-Release:	2
+Release:	3
 License:	ZPL 2.1
 Group:		Libraries/Python
 Source0:	http://pypi.python.org/packages/source/z/zope.deferredimport/zope.deferredimport-%{version}.tar.gz
@@ -20,6 +20,7 @@ BuildRequires:	rpmbuild(macros) >= 1.710
 Requires:	python-zope.proxy
 Requires:	python-zope.testing
 Obsoletes:	Zope-DeferredImport
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -38,7 +39,7 @@ Opóźnianie importu modułów Pythona.
 rm -rf $RPM_BUILD_ROOT
 
 %py_install \
-	--install-purelib=%{py_sitedir} \
+	--install-purelib=%{py_sitescriptdir} \
 	--optimize 2 \
 	--root=$RPM_BUILD_ROOT
 
@@ -49,6 +50,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{py_sitedir}/zope/deferredimport
-%{py_sitedir}/zope.deferredimport-*.egg-info
-%{py_sitedir}/zope.deferredimport-*-nspkg.pth
+%{py_sitescriptdir}/zope/deferredimport
+%{py_sitescriptdir}/zope.deferredimport-*.egg-info
+%{py_sitescriptdir}/zope.deferredimport-*-nspkg.pth
