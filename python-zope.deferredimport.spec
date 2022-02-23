@@ -123,6 +123,7 @@ rm -rf $RPM_BUILD_ROOT
 %if %{with python2}
 %files
 %defattr(644,root,root,755)
+%doc CHANGES.rst COPYRIGHT.txt LICENSE.txt README.rst
 %{py_sitescriptdir}/zope/deferredimport
 %{py_sitescriptdir}/zope.deferredimport-*.egg-info
 %{py_sitescriptdir}/zope.deferredimport-*-nspkg.pth
@@ -131,6 +132,7 @@ rm -rf $RPM_BUILD_ROOT
 %if %{with python3}
 %files -n python3-%{module}
 %defattr(644,root,root,755)
+%doc CHANGES.rst COPYRIGHT.txt LICENSE.txt README.rst
 %{py3_sitescriptdir}/zope/deferredimport
 %{py3_sitescriptdir}/zope.deferredimport-*.egg-info
 %{py3_sitescriptdir}/zope.deferredimport-*-nspkg.pth
