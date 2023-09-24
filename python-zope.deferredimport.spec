@@ -9,6 +9,7 @@
 Summary:	Defer Python module import
 Summary(pl.UTF-8):	Opóźnianie importu modułów Pythona
 Name:		python-%{module}
+# keep 4.x here for python2 support
 Version:	4.4
 Release:	4
 License:	ZPL v2.1
