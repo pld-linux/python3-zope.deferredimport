@@ -11,7 +11,7 @@ Summary(pl.UTF-8):	Opóźnianie importu modułów Pythona
 Name:		python-%{module}
 # keep 4.x here for python2 support
 Version:	4.4
-Release:	5
+Release:	6
 License:	ZPL v2.1
 Group:		Libraries/Python
 Source0:	https://files.pythonhosted.org/packages/source/z/zope.deferredimport/zope.deferredimport-%{version}.tar.gz
