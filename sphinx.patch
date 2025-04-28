@@ -1,0 +1,8 @@
+--- zope.deferredimport-4.4/docs/conf.py~	2021-12-10 09:16:04.000000000 +0100
++++ zope.deferredimport-4.4/docs/conf.py	2025-04-29 01:33:29.879999287 +0200
+@@ -271,4 +271,4 @@
+ 
+ 
+ # Example configuration for intersphinx: refer to the Python standard library.
+-intersphinx_mapping = {'http://docs.python.org/': None}
++intersphinx_mapping = {'python': ('http://docs.python.org/', None)}
