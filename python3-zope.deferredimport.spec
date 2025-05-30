@@ -26,6 +26,8 @@ BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
 %if %{with doc}
 BuildRequires:	python3-repoze.sphinx.autointerface
+# already installed package due to package namespace issues (required for "_modules" docs subdir)
+BuildRequires:	python3-zope.deferredimport
 BuildRequires:	sphinx-pdg-3
 %endif
 Requires:	python3-modules >= 1:3.7
@@ -82,11 +84,11 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CHANGES.rst COPYRIGHT.txt LICENSE.txt README.rst
 %{py3_sitescriptdir}/zope/deferredimport
-%{py3_sitescriptdir}/zope.deferredimport-*.egg-info
-%{py3_sitescriptdir}/zope.deferredimport-*-nspkg.pth
+%{py3_sitescriptdir}/zope.deferredimport-%{version}-py*.egg-info
+%{py3_sitescriptdir}/zope.deferredimport-%{version}-py*-nspkg.pth
 
 %if %{with doc}
 %files apidocs
 %defattr(644,root,root,755)
-%doc docs/_build/html/{_sources,_static,*.html,*.js}
+%doc docs/_build/html/{_modules,_static,*.html,*.js}
 %endif
